@@ -1,10 +1,66 @@
-- 👋 Hi, I’m @angelivan44
-- 👀 I’m interested in to learn and share knwologe
-- 🌱 I’m currently learning Typescript
-- 💞️ I’m looking to collaborate on great team
-- 📫 How to reach me send a email angelhuayas@gmail.com
+### Hola 👋
+Soy Ángel Iván Huayas Izquierdo, un desarrollador FullStack y diseñador buscando nuevas aventuras.
 
-<!---
-angelivan44/angelivan44 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+### Desarrollador FullStack.
+### Diseñador.
+### Disruptor.
+
+## Habilidades de desarrollo
+[![Mis habilidades](https://skillicons.dev/icons?i=js,ts,react,next)](https://skillicons.dev)
+
+[![Mis habilidades](https://skillicons.dev/icons?i=ruby,rails,postgres)](https://skillicons.dev)  
+
+[![Mis habilidades](https://skillicons.dev/icons?i=html,css,sass,bootstrap,tailwind)](https://skillicons.dev)  
+
+[![Mis habilidades](https://skillicons.dev/icons?i=git,github,linux,bash)](https://skillicons.dev)  
+<img src="./assets/bulma.png" style="width:47px"></img>
+## Habilidades de diseño
+[![Mis habilidades](https://skillicons.dev/icons?i=ae,ai,ps,pr,figma)](https://skillicons.dev)
+## Habilidades blandas
+
+- Líder
+- Jugador de equipo
+- Lealtad
+- Perseverancia
+- Disciplina
+- Experto
+- Versátil
+- Receptivo
+
+
+### Javascript
+<div align="center">
+<a href="https://github.com/angelivan44/proyecto1">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=angelivan44&repo=servipy_page" />
+</a>
+ <a href="https://github.com/angelivan44/proyecto2">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=angelivan44&repo=fitgym-landingpage " />
+</a>
+
+</div>
+
+---
+
+### Ruby
+<div align="center">
+<a href="https://github.com/angelivan44/proyecto3">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=angelivan44&repo=we-travel-backend" />
+</a>
+<a href="https://github.com/angelivan44/proyecto4">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=angelivan44&repo=BabyStore-Api" />
+</a>
+</div>
+
+---
+
+### Solo HTML & CSS
+<div align="center">
+<a href="https://github.com/angelivan44/proyecto5">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=angelivan44&repo=bsale_front" />
+</a>
+</div>
+
+---
+
+### Contacta conmigo >>> angelhuayas@gmail.com
+[![Mis habilidades](https://skillicons.dev/icons?i=linkedin)]([/](https://www.linkedin.com/in/%C3%A1ngel-ivan-huayas-izquierdo/)https://www.linkedin.com/in/%C3%A1ngel-ivan-huayas-izquierdo/)   
