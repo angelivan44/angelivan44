@@ -32,7 +32,7 @@ Soy Ángel Iván Huayas Izquierdo, un desarrollador FullStack y diseñador busca
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=angelivan44&repo=servipy_page" />
 </a>
  <a href="https://github.com/angelivan44/proyecto2">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=angelivan44&repo=fitgym-landingpage " />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=angelivan44&repo=fitgym-landingpage" />
 </a>
 
 </div>
