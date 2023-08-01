@@ -13,9 +13,7 @@ Soy Ángel Iván Huayas Izquierdo, un desarrollador FullStack y diseñador busca
 [![Mis habilidades](https://skillicons.dev/icons?i=html,css,sass,bootstrap,tailwind)](https://skillicons.dev)  
 
 [![Mis habilidades](https://skillicons.dev/icons?i=git,github,linux,bash)](https://skillicons.dev)  
-<img src="./assets/bulma.png" style="width:47px"></img>
-## Habilidades de diseño
-[![Mis habilidades](https://skillicons.dev/icons?i=ae,ai,ps,pr,figma)](https://skillicons.dev)
+
 ## Habilidades blandas
 
 - Líder
