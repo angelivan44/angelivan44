@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!--PAGE-->
+<title>Ángel Iván Huayas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Senior FullStack Developer · Rails, React, Next.js, React Native e IA aplicada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: columna central de 960px, secciones con cabecera técnica en mono; una araña de líneas vive en un canvas fijo encima de todo. */
+:root{
+  --bg:#060912; --bg2:#0b1020; --panel:#111629; --line:#1f2742;
+  --ink:#c0caf5; --muted:#7c83a8; --white:#e8ecf6;
+  --blue:#7aa2f7; --violet:#bb9af7; --orange:#D97757; --green:#9ece6a; --pink:#f7768e;
+  --display:'Space Grotesk','Segoe UI',system-ui,sans-serif;
+  --body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{background:var(--bg);color:var(--ink)}
+body{margin:0;font:15px/1.6 var(--body);overflow-x:hidden;
+  background:radial-gradient(900px 500px at 15% -10%,rgba(122,90,248,.16),transparent 60%),radial-gradient(800px 500px at 100% 40%,rgba(217,119,87,.08),transparent 60%),var(--bg);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 0}
+canvas#web{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:20}
+#page{max-width:960px;margin:0 auto;display:flex;flex-direction:column;gap:64px}
+img{max-width:100%;display:block}
+a{color:var(--blue);text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--violet);outline-offset:3px;border-radius:6px}
+
+/* hero */
+.hero{display:flex;flex-direction:column;gap:22px;align-items:center;text-align:center}
+.hero .banner{width:100%;border-radius:18px;box-shadow:0 30px 80px -30px rgba(122,90,248,.45)}
+.typing{font:600 clamp(15px,2.4vw,20px) var(--mono);color:var(--violet);min-height:1.6em}
+.typing .cur{display:inline-block;width:.55em;height:1.1em;margin-left:2px;vertical-align:-.18em;background:var(--violet);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--white);font:600 13px var(--body);letter-spacing:.02em;transition:border-color .2s,transform .2s}
+.btn:hover{border-color:var(--violet);transform:translateY(-2px)}
+.btn svg{width:16px;height:16px;fill:currentColor}
+.btn.li{background:#0A66C2;border-color:#0A66C2}
+.mail{font:400 12px var(--mono);color:var(--muted)}
+.lead{max-width:640px;margin:0 auto;font:500 clamp(18px,2.6vw,22px)/1.45 var(--display);color:var(--white);text-wrap:balance}
+.lead span{color:var(--muted);font-weight:500}
+
+/* secciones */
+section{display:flex;flex-direction:column;gap:20px}
+.sh{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:10px}
+.sh h2{margin:0;font:700 22px var(--display);letter-spacing:.06em;color:var(--white)}
+.sh .tag{font:400 12px var(--mono);color:var(--muted)}
+.sh .tag b{color:var(--violet);font-weight:400}
+.engine{width:100%;border-radius:18px}
+
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;gap:9px;padding:8px 14px 8px 10px;border-radius:999px;background:var(--panel);border:1px solid var(--line);font:500 13px var(--body);color:var(--white);transition:box-shadow .5s,border-color .5s,background-color .5s}
+.chip img{width:18px;height:18px}
+
+/* stack */
+.dna{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:720px){.dna{grid-template-columns:1fr}}
+.group{background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.group.wide{grid-column:1/-1}
+.group h3{margin:0;font:600 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.icons{display:grid;grid-template-columns:repeat(auto-fill,minmax(74px,1fr));gap:10px}
+.tile{display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px 4px 8px;border-radius:12px;border:1px solid transparent;transition:box-shadow .5s,border-color .5s,background-color .5s}
+.tile img{width:42px;height:42px}
+.tile span{font:400 11px var(--mono);color:var(--muted);text-align:center;line-height:1.3}
+.extra{font:400 12px var(--mono);color:var(--muted)}
+.extra code{color:var(--ink);background:rgba(122,162,247,.08);border:1px solid var(--line);border-radius:5px;padding:1px 6px;font:inherit}
+
+/* actividad */
+.activity{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:16px;align-items:center}
+.stats{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.stats img{height:160px;width:auto}
+.snake{width:100%}
+.note{font:400 12px var(--mono);color:var(--muted);text-align:center}
+
+/* footer */
+footer{margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));position:relative;margin-top:-20px}
+footer svg{display:block;width:100%;height:140px}
+footer .ft{position:absolute;inset:auto 0 26px;text-align:center;font:600 13px var(--mono);color:#fff;letter-spacing:.06em;padding-inline:16px}
+footer .ft small{display:block;font-weight:400;opacity:.75;margin-top:4px}
+.wave1{animation:wave 9s ease-in-out infinite alternate}
+.wave2{animation:wave 13s ease-in-out infinite alternate-reverse}
+@keyframes wave{to{transform:translateX(-120px)}}
+
+/* lo que la araña agarra */
+.w{display:inline-block;border-radius:2px;transition:background-color .5s,color .5s,box-shadow .5s}
+.w.g-box{box-shadow:0 0 0 1px var(--white);transition:none}
+.w.g-pink{background:var(--pink);color:#160810;transition:none}
+.w.g-cyan{background:#7fe3e8;color:#06222a;transition:none}
+.w.g-mono{font-family:var(--mono);color:var(--orange);transition:none}
+.w.g-glow{color:#fff;text-shadow:0 0 10px var(--violet);transition:none}
+.grab.g-ring{box-shadow:0 0 0 1.5px var(--violet),0 0 18px -2px var(--violet);border-color:var(--violet);transition:none}
+.grab.g-ringo{box-shadow:0 0 0 1.5px var(--orange),0 0 18px -2px var(--orange);border-color:var(--orange);transition:none}
+.grab.g-fill{background-color:rgba(158,206,106,.14);border-color:var(--green);transition:none}
+.w,.grab{will-change:transform}
+
+.toggle{position:fixed;right:max(14px,env(safe-area-inset-right,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:30;font:500 12px var(--mono);color:var(--white);background:rgba(17,22,41,.85);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer}
+.toggle:hover{border-color:var(--violet)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<canvas id="web" aria-hidden="true"></canvas>
+<button class="toggle" id="toggle" type="button" aria-pressed="false">/[•]\ pausar araña</button>
+
+<main id="page">
+  <header class="hero">
+    <img class="banner" src="assets/hero.svg" alt="Ángel Iván Huayas Izquierdo, Senior FullStack Developer · AI Engineering" width="1200" height="380">
+    <div class="typing" aria-live="off" data-nowrap><span id="type"></span><span class="cur" aria-hidden="true"></span></div>
+    <nav class="links" aria-label="Contacto">
+      <a class="btn li grab" href="https://www.linkedin.com/in/%C3%A1ngel-ivan-huayas-izquierdo/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a>
+      <a class="btn grab" href="https://github.com/angelivan44?tab=repositories" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/></svg>Explora mi trabajo</a>
+      <a class="btn grab" href="mailto:angelhuayas@gmail.com">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13zm2.3-.5 7.7 6.2L19.7 5H4.3zM20 6.6l-7.4 6a1 1 0 0 1-1.2 0L4 6.6v11.9c0 .3.2.5.5.5h15c.3 0 .5-.2.5-.5V6.6z"/></svg>Hablemos</a>
+    </nav>
+    <span class="mail">angelhuayas@gmail.com</span>
+    <p class="lead">Construyo productos que conectan ingeniería de software, automatización e inteligencia artificial. <span>De una arquitectura sólida a una experiencia que se siente simple.</span></p>
+  </header>
+
+  <section aria-labelledby="h-ai">
+    <div class="sh"><h2 id="h-ai">AI ENGINE</h2><span class="tag"><b>/</b> agentes e IA aplicada</span></div>
+    <img class="engine" src="assets/ai-engine.svg" alt="Pipeline animado: pensar, orquestar, integrar y entregar" width="1200" height="260">
+    <div class="chips">
+      <span class="chip grab"><img src="assets/icons/si-anthropic.svg" alt="">Claude Code</span>
+      <span class="chip grab"><img src="assets/icons/si-openai.svg" alt="">OpenAI Codex</span>
+      <span class="chip grab"><img src="assets/icons/si-modelcontextprotocol.svg" alt="">MCP</span>
+      <span class="chip grab"><img src="assets/icons/si-cursor.svg" alt="">Cursor</span>
+      <span class="chip grab"><img src="assets/icons/si-githubcopilot.svg" alt="">GitHub Copilot</span>
+      <span class="chip grab"><img src="assets/icons/si-anthropic.svg" alt="">Anthropic API</span>
+      <span class="chip grab"><img src="assets/icons/si-openai.svg" alt="">OpenAI API</span>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-dna">
+    <div class="sh"><h2 id="h-dna">TECH DNA</h2><span class="tag"><b>/</b> stack</span></div>
+    <div class="dna">
+      <div class="group">
+        <h3>Lenguajes</h3>
+        <div class="icons">
+          <div class="tile grab"><img src="assets/icons/ts.svg" alt=""><span>TypeScript</span></div>
+          <div class="tile grab"><img src="assets/icons/js.svg" alt=""><span>JavaScript</span></div>
+          <div class="tile grab"><img src="assets/icons/ruby.svg" alt=""><span>Ruby</span></div>
+          <div class="tile grab"><img src="assets/icons/php.svg" alt=""><span>PHP</span></div>
+          <div class="tile grab"><img src="assets/icons/python.svg" alt=""><span>Python</span></div>
+          <div class="tile grab"><img src="assets/icons/bash.svg" alt=""><span>Bash</span></div>
+        </div>
+      </div>
+      <div class="group">
+        <h3>Frontend + Mobile</h3>
+        <div class="icons">
+          <div class="tile grab"><img src="assets/icons/react.svg" alt=""><span>React</span></div>
+          <div class="tile grab"><img src="assets/icons/nextjs.svg" alt=""><span>Next.js</span></div>
+          <div class="tile grab"><img src="assets/icons/tailwind.svg" alt=""><span>Tailwind</span></div>
+          <div class="tile grab"><img src="assets/icons/sass.svg" alt=""><span>Sass</span></div>
+          <div class="tile grab"><img src="assets/icons/html.svg" alt=""><span>HTML</span></div>
+          <div class="tile grab"><img src="assets/icons/css.svg" alt=""><span>CSS</span></div>
+        </div>
+        <p class="extra"><code>React Native (bare)</code> <code>Zustand</code> <code>React Query</code></p>
+      </div>
+      <div class="group">
+        <h3>Backend + Datos</h3>
+        <div class="icons">
+          <div class="tile grab"><img src="assets/icons/rails.svg" alt=""><span>Rails</span></div>
+          <div class="tile grab"><img src="assets/icons/nodejs.svg" alt=""><span>Node.js</span></div>
+          <div class="tile grab"><img src="assets/icons/postgres.svg" alt=""><span>PostgreSQL</span></div>
+          <div class="tile grab"><img src="assets/icons/sqlite.svg" alt=""><span>SQLite</span></div>
+          <div class="tile grab"><img src="assets/icons/firebase.svg" alt=""><span>Firebase</span></div>
+          <div class="tile grab"><img src="assets/icons/redis.svg" alt=""><span>Redis</span></div>
+        </div>
+        <p class="extra"><code>REST</code> <code>GraphQL</code> <code>Sidekiq</code> <code>JWT</code> <code>Firestore</code> <code>Cloud Functions</code></p>
+      </div>
+      <div class="group">
+        <h3>DevOps + Tools</h3>
+        <div class="icons">
+          <div class="tile grab"><img src="assets/icons/docker.svg" alt=""><span>Docker</span></div>
+          <div class="tile grab"><img src="assets/icons/linux.svg" alt=""><span>Linux</span></div>
+          <div class="tile grab"><img src="assets/icons/nginx.svg" alt=""><span>Nginx</span></div>
+          <div class="tile grab"><img src="assets/icons/cloudflare.svg" alt=""><span>Cloudflare</span></div>
+          <div class="tile grab"><img src="assets/icons/vercel.svg" alt=""><span>Vercel</span></div>
+          <div class="tile grab"><img src="assets/icons/git.svg" alt=""><span>Git</span></div>
+          <div class="tile grab"><img src="assets/icons/github.svg" alt=""><span>GitHub</span></div>
+          <div class="tile grab"><img src="assets/icons/githubactions.svg" alt=""><span>Actions</span></div>
+          <div class="tile grab"><img src="assets/icons/figma.svg" alt=""><span>Figma</span></div>
+          <div class="tile grab"><img src="assets/icons/postman.svg" alt=""><span>Postman</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-con">
+    <div class="sh"><h2 id="h-con">CONNECTIONS</h2><span class="tag"><b>/</b> integraciones</span></div>
+    <div class="chips">
+      <span class="chip grab"><img src="assets/icons/si-twilio.svg" alt="">Twilio SMS / OTP</span>
+      <span class="chip grab"><img src="assets/icons/si-whatsapp.svg" alt="">WhatsApp Business API</span>
+      <span class="chip grab"><img src="assets/icons/si-zoho.svg" alt="">Zoho Desk · Sprints · Deluge</span>
+      <span class="chip grab"><img src="assets/icons/si-odoo.svg" alt="">Odoo XML-RPC</span>
+      <span class="chip grab"><img src="assets/icons/si-stripe.svg" alt="">Stripe</span>
+      <span class="chip grab"><img src="assets/icons/si-wordpress.svg" alt="">WordPress</span>
+      <span class="chip grab"><img src="assets/icons/si-kinsta.svg" alt="">Kinsta</span>
+    </div>
+  </section>
+
+  <section aria-labelledby="h-tel">
+    <div class="sh"><h2 id="h-tel">GITHUB TELEMETRY</h2><span class="tag"><b>/</b> commits y actividad</span></div>
+    <div class="activity">
+      <div class="stats">
+        <img class="remote" src="https://github-readme-stats.vercel.app/api?username=angelivan44&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0b1020&title_color=bb9af7&icon_color=7aa2f7" alt="Estadísticas de GitHub" loading="lazy">
+        <img class="remote" src="https://streak-stats.demolab.com?user=angelivan44&theme=tokyonight&hide_border=true&background=0B1020&ring=BB9AF7&fire=D97757&currStreakLabel=BB9AF7" alt="Racha de contribuciones" loading="lazy">
+      </div>
+      <img class="snake" src="https://raw.githubusercontent.com/angelivan44/angelivan44/output/snake-dark.svg" data-fallback="assets/snake-dark.svg" alt="Serpiente comiéndose el gráfico de contribuciones">
+      <p class="note">La serpiente se regenera cada 12 horas con tus commits.</p>
+    </div>
+  </section>
+
+  <footer>
+    <svg viewBox="0 0 1200 140" preserveAspectRatio="none" aria-hidden="true">
+      <defs><linearGradient id="wg" x1="0" x2="1"><stop offset="0" stop-color="#7aa2f7"/><stop offset=".5" stop-color="#bb9af7"/><stop offset="1" stop-color="#D97757"/></linearGradient></defs>
+      <path class="wave2" fill="url(#wg)" opacity=".35" d="M0 60 C200 20 400 100 600 60 S1000 20 1320 60 V140 H0Z"/>
+      <path class="wave1" fill="url(#wg)" d="M0 80 C200 40 420 120 640 80 S1040 40 1320 80 V140 H0Z"/>
+    </svg>
+    <div class="ft">Engineering mindset · Product thinking · AI-powered execution<small>© Ángel Iván Huayas Izquierdo</small></div>
+  </footer>
+</main>
+
+<script>
+// imágenes externas: si no cargan, usar la copia local o esconderlas
+document.querySelectorAll('img.snake').forEach(i => i.addEventListener('error', () => { if (i.dataset.fallback && i.src.indexOf(i.dataset.fallback) < 0) i.src = i.dataset.fallback; }));
+document.querySelectorAll('img.remote').forEach(i => i.addEventListener('error', () => i.remove()));
+
+// línea que se escribe sola
+(() => {
+  const el = document.getElementById('type');
+  const lines = ['Arquitecturas que escalan', 'Agentes de IA que trabajan por ti', 'Apps web y móviles de punta a punta', 'Integraciones que conectan todo'];
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { el.textContent = lines[0]; return; }
+  let li = 0, ci = 0, del = false;
+  (function tick() {
+    const s = lines[li];
+    ci += del ? -1 : 1; el.textContent = s.slice(0, ci);
+    let wait = del ? 28 : 55;
+    if (!del && ci === s.length) { del = true; wait = 1400; }
+    else if (del && ci === 0) { del = false; li = (li + 1) % lines.length; wait = 350; }
+    setTimeout(tick, wait);
+  })();
+})();
+
+// la araña
+(() => {
+  const cv = document.getElementById('web'), ctx = cv.getContext('2d');
+  const root = document.getElementById('page'), toggle = document.getElementById('toggle');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // envolver palabras de los textos (no los que cambian solos)
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode: n => !n.nodeValue.trim() || n.parentElement.closest('[data-nowrap],svg,script,style') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+  });
+  const texts = []; while (walker.nextNode()) texts.push(walker.currentNode);
+  for (const t of texts) {
+    if (t.parentElement.closest('.grab')) continue; // chips y tiles se agarran enteros
+    const frag = document.createDocumentFragment();
+    for (const part of t.nodeValue.split(/(\s+)/)) {
+      if (!part) continue;
+      if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); continue; }
+      const s = document.createElement('span'); s.className = 'w'; s.textContent = part; frag.appendChild(s);
+    }
+    t.parentNode.replaceChild(frag, t);
+  }
+
+  const CELL = 90; let items = [], grid = new Map();
+  function measure() {
+    items = []; grid = new Map();
+    const sx = scrollX, sy = scrollY;
+    root.querySelectorAll('.w, .grab').forEach(el => {
+      const r = el.getBoundingClientRect(); if (!r.width) return;
+      const tile = el.classList.contains('grab');
+      const it = { el, tile, x: r.left + sx, y: r.top + sy, w: r.width, h: r.height, held: 0 };
+      it.cx = it.x + it.w / 2; it.cy = it.y + it.h / 2; items.push(it);
+      const k = Math.floor(it.cx / CELL) + ',' + Math.floor(it.cy / CELL);
+      (grid.get(k) || grid.set(k, []).get(k)).push(it);
+    });
+  }
+  let mq = 0; const remeasure = () => { clearTimeout(mq); mq = setTimeout(measure, 120); };
+  function nearest(x, y, maxD) {
+    let best = null, bd = maxD * maxD;
+    const gx = Math.floor(x / CELL), gy = Math.floor(y / CELL), rr = Math.ceil(maxD / CELL) + 1;
+    for (let i = -rr; i <= rr; i++) for (let j = -rr; j <= rr; j++) {
+      const arr = grid.get((gx + i) + ',' + (gy + j)); if (!arr) continue;
+      for (const w of arr) {
+        const px = Math.max(w.x, Math.min(x, w.x + w.w)), py = Math.max(w.y, Math.min(y, w.y + w.h));
+        const d = (px - x) ** 2 + (py - y) ** 2 - (w.tile ? 400 : 0);
+        if (d < bd) { bd = d; best = w; }
+      }
+    }
+    return best;
+  }
+
+  let W = 0, H = 0;
+  function resize() {
+    const dpr = Math.min(2, devicePixelRatio || 1); W = innerWidth; H = innerHeight;
+    cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); measure();
+  }
+
+  const S = Math.min(1, Math.max(.72, innerWidth / 900));
+  const LEGS = [{ a: .42, l1: 58, l2: 66 }, { a: 1.05, l1: 50, l2: 56 }, { a: 1.95, l1: 48, l2: 54 }, { a: 2.55, l1: 56, l2: 64 }];
+  const WSTY = ['g-box', 'g-box', 'g-pink', 'g-cyan', 'g-mono', 'g-glow'], TSTY = ['g-ring', 'g-ringo', 'g-fill'];
+  const sp = { x: innerWidth * .5 + scrollX, y: innerHeight * .78 + scrollY, vx: 0, vy: 0, head: -Math.PI / 2, legs: [] };
+  [-1, 1].forEach(side => LEGS.forEach((L, i) => sp.legs.push({ side, i, a: L.a * side, l1: L.l1 * S, l2: L.l2 * S, fx: sp.x, fy: sp.y, sx: 0, sy: 0, tx: 0, ty: 0, t: 1, it: null, cls: null, next: null })));
+
+  const hip = l => { const a = sp.head + l.a * .5; return [sp.x + Math.cos(a) * 7 * S, sp.y + Math.sin(a) * 7 * S]; };
+  const ideal = l => { const a = sp.head + l.a, r = (l.l1 + l.l2) * .74; return [sp.x + Math.cos(a) * r + sp.vx * .12, sp.y + Math.sin(a) * r + sp.vy * .12]; };
+  function grab(l, it) {
+    if (!it) return; l.it = it; it.held++;
+    const pool = it.tile ? TSTY : WSTY; l.cls = pool[(Math.random() * pool.length) | 0];
+    it.el.classList.add(l.cls);
+  }
+  function release(l) {
+    const it = l.it, cls = l.cls; if (!it) return; l.it = null; it.held--;
+    setTimeout(() => { it.el.classList.remove(cls); if (!it.held) it.el.style.transform = ''; }, 700 + Math.random() * 900);
+  }
+  function plant(x, y) {
+    const it = nearest(x, y, 80 * S);
+    if (it) { x = it.x + 3 + Math.random() * Math.max(1, it.w - 6); y = it.tile ? it.y + 4 + Math.random() * Math.max(1, it.h - 8) : it.y + (Math.random() < .5 ? 2 : it.h - 2); }
+    return [x, y, it];
+  }
+  function step(l) { const [ix, iy] = ideal(l), [x, y, it] = plant(ix, iy); release(l); l.sx = l.fx; l.sy = l.fy; l.tx = x; l.ty = y; l.t = 0; l.next = it; }
+
+  let pointer = null, lastMove = -1e9, paused = false;
+  const auto = { x: sp.x, y: sp.y, wait: 0 };
+  const onPtr = e => { pointer = { x: e.clientX, y: e.clientY }; lastMove = performance.now(); };
+  addEventListener('pointermove', onPtr, { passive: true });
+  addEventListener('pointerdown', onPtr, { passive: true });
+  addEventListener('resize', resize);
+  addEventListener('load', measure);
+  document.querySelectorAll('img').forEach(i => i.addEventListener('load', remeasure));
+  if ('ResizeObserver' in window) new ResizeObserver(remeasure).observe(root);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+  toggle.addEventListener('click', () => {
+    paused = !paused; toggle.setAttribute('aria-pressed', paused);
+    toggle.textContent = paused ? '/[•]\\ soltar araña' : '/[•]\\ pausar araña';
+  });
+
+  function pickAuto() {
+    const vis = items.filter(w => w.cy > scrollY + 70 && w.cy < scrollY + H - 70);
+    const w = vis[(Math.random() * vis.length) | 0];
+    if (w) { auto.x = w.cx; auto.y = w.cy; } else { auto.x = scrollX + W / 2; auto.y = scrollY + H / 2; }
+    auto.wait = .4 + Math.random() * 1.1;
+  }
+
+  function update(dt, now) {
+    const follow = pointer && now - lastMove < 2600;
+    let tx, ty;
+    if (follow) { tx = pointer.x + scrollX; ty = pointer.y + scrollY; }
+    else {
+      if (auto.y < scrollY + 40 || auto.y > scrollY + H - 40) pickAuto();
+      if (Math.hypot(auto.x - sp.x, auto.y - sp.y) < 12) { auto.wait -= dt; if (auto.wait <= 0) pickAuto(); }
+      tx = auto.x; ty = auto.y;
+    }
+    const dx = tx - sp.x, dy = ty - sp.y, dist = Math.hypot(dx, dy);
+    const maxV = (follow ? 1100 : 240) * S, g = follow ? 6 : 2.2;
+    let vx = dx * g, vy = dy * g; const v = Math.hypot(vx, vy); if (v > maxV) { vx *= maxV / v; vy *= maxV / v; }
+    sp.vx += (vx - sp.vx) * Math.min(1, dt * 8); sp.vy += (vy - sp.vy) * Math.min(1, dt * 8);
+    sp.x += sp.vx * dt; sp.y += sp.vy * dt;
+    if (Math.hypot(sp.vx, sp.vy) > 25 && dist > 4) {
+      let d = Math.atan2(sp.vy, sp.vx) - sp.head; d = Math.atan2(Math.sin(d), Math.cos(d)); sp.head += d * Math.min(1, dt * 6);
+    }
+    const stepping = sp.legs.filter(l => l.t < 1).length, speed = Math.hypot(sp.vx, sp.vy);
+    for (const l of sp.legs) {
+      if (l.t < 1) {
+        l.t = Math.min(1, l.t + dt / (speed > 500 ? .07 : .13));
+        const e = l.t < .5 ? 2 * l.t * l.t : 1 - (-2 * l.t + 2) ** 2 / 2, lift = Math.sin(l.t * Math.PI) * 10 * S;
+        const nx = -(l.ty - l.sy), ny = l.tx - l.sx, nl = Math.hypot(nx, ny) || 1;
+        l.fx = l.sx + (l.tx - l.sx) * e + nx / nl * lift * l.side; l.fy = l.sy + (l.ty - l.sy) * e + ny / nl * lift * l.side;
+        if (l.t === 1) { l.fx = l.tx; l.fy = l.ty; grab(l, l.next); }
+        continue;
+      }
+      const [ix, iy] = ideal(l), [hx, hy] = hip(l);
+      const off = Math.hypot(l.fx - ix, l.fy - iy), over = Math.hypot(l.fx - hx, l.fy - hy) > (l.l1 + l.l2) * .97;
+      const nb = sp.legs.some(o => o.side === l.side && Math.abs(o.i - l.i) === 1 && o.t < 1);
+      if (over || (off > (l.l1 + l.l2) * .42 && stepping < 4 && !nb)) step(l);
+    }
+    for (const l of sp.legs) {
+      if (!l.it || l.t < 1) continue;
+      const it = l.it, [hx, hy] = hip(l), ddx = hx - it.cx, ddy = hy - it.cy, d = Math.hypot(ddx, ddy) || 1, k = Math.min(it.tile ? 3 : 4, d * .03);
+      it.el.style.transform = `translate(${(ddx / d * k).toFixed(1)}px,${(ddy / d * k).toFixed(1)}px)`;
+    }
+  }
+
+  function knee(l, hx, hy) {
+    const dx = l.fx - hx, dy = l.fy - hy;
+    const d = Math.max(Math.abs(l.l1 - l.l2) + .1, Math.min(l.l1 + l.l2 - .1, Math.hypot(dx, dy)));
+    const base = Math.atan2(dy, dx), a = Math.acos(Math.max(-1, Math.min(1, (l.l1 * l.l1 + d * d - l.l2 * l.l2) / (2 * l.l1 * d))));
+    const k1 = [hx + Math.cos(base + a) * l.l1, hy + Math.sin(base + a) * l.l1], k2 = [hx + Math.cos(base - a) * l.l1, hy + Math.sin(base - a) * l.l1];
+    return Math.hypot(k1[0] - sp.x, k1[1] - sp.y) > Math.hypot(k2[0] - sp.x, k2[1] - sp.y) ? k1 : k2;
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    const ox = scrollX, oy = scrollY; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    for (const l of sp.legs) {
+      const [hx, hy] = hip(l), [kx, ky] = knee(l, hx, hy);
+      ctx.strokeStyle = 'rgba(232,236,246,.92)'; ctx.lineWidth = 1.4;
+      ctx.beginPath(); ctx.moveTo(hx - ox, hy - oy); ctx.lineTo(kx - ox, ky - oy); ctx.lineTo(l.fx - ox, l.fy - oy); ctx.stroke();
+      ctx.fillStyle = '#e8ecf6'; ctx.beginPath(); ctx.arc(kx - ox, ky - oy, 1.8, 0, 7); ctx.fill();
+      ctx.fillStyle = l.t < 1 ? '#7fe3e8' : '#f7768e'; ctx.beginPath(); ctx.arc(l.fx - ox, l.fy - oy, 2.2, 0, 7); ctx.fill();
+    }
+    ctx.save(); ctx.translate(sp.x - ox, sp.y - oy); ctx.rotate(sp.head);
+    ctx.fillStyle = '#060912'; ctx.strokeStyle = '#e8ecf6'; ctx.lineWidth = 1.4;
+    ctx.beginPath(); ctx.ellipse(-12 * S, 0, 11 * S, 8 * S, 0, 0, 7); ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.ellipse(4 * S, 0, 7 * S, 5.5 * S, 0, 0, 7); ctx.fill(); ctx.stroke();
+    ctx.fillStyle = '#bb9af7'; ctx.beginPath(); ctx.arc(-12 * S, 0, 2.6 * S, 0, 7); ctx.fill();
+    ctx.fillStyle = '#e8ecf6'; ctx.beginPath(); ctx.arc(9 * S, -2 * S, 1.3, 0, 7); ctx.arc(9 * S, 2 * S, 1.3, 0, 7); ctx.fill();
+    ctx.restore();
+  }
+
+  let last = performance.now();
+  function frame(now) { const dt = Math.min(.05, (now - last) / 1000); last = now; if (!paused && !reduce) update(dt, now); draw(); requestAnimationFrame(frame); }
+  resize();
+  sp.legs.forEach(l => { const [ix, iy] = ideal(l), [x, y, it] = plant(ix, iy); l.fx = x; l.fy = y; grab(l, it); });
+  pickAuto(); requestAnimationFrame(frame);
+})();
+</script>
+<!--/PAGE-->
+</body>
+</html>

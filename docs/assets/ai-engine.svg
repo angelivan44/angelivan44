@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="260" viewBox="0 0 1200 260" role="img" aria-labelledby="t d">
+  <title id="t">AI Engine — pensar, orquestar agentes, integrar y entregar</title>
+  <desc id="d">Pipeline animado de cuatro etapas con pulsos de datos viajando entre nodos.</desc>
+  <style>
+    .mono{font-family:ui-monospace,SFMono-Regular,'JetBrains Mono',Menlo,Consolas,monospace}
+    .sans{font-family:'Segoe UI',Inter,system-ui,-apple-system,Helvetica,Arial,sans-serif}
+    .node{animation:glow 4s ease-in-out infinite}
+    .n2{animation-delay:1s}.n3{animation-delay:2s}.n4{animation-delay:3s}
+    @keyframes glow{0%,70%,100%{stroke-opacity:.3}15%{stroke-opacity:1}}
+    .ring{transform-box:fill-box;transform-origin:center;animation:spin 10s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .dash{stroke-dasharray:6 8;animation:flow 1.2s linear infinite}
+    @keyframes flow{to{stroke-dashoffset:-28}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#060912"/><stop offset="1" stop-color="#111629"/>
+    </linearGradient>
+    <linearGradient id="wire" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7aa2f7"/><stop offset=".5" stop-color="#bb9af7"/><stop offset="1" stop-color="#D97757"/>
+    </linearGradient>
+    <radialGradient id="pulse"><stop offset="0" stop-color="#fff"/><stop offset=".4" stop-color="#bb9af7"/><stop offset="1" stop-color="#bb9af7" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#7aa2f7" stroke-opacity=".05"/>
+    </pattern>
+    <path id="p" d="M180 120 C 300 40, 360 200, 460 120 S 640 40, 740 120 S 920 200, 1020 120"/>
+  </defs>
+
+  <rect width="1200" height="260" rx="18" fill="url(#bg)"/>
+  <rect width="1200" height="260" rx="18" fill="url(#grid)"/>
+
+  <use href="#p" fill="none" stroke="url(#wire)" stroke-opacity=".25" stroke-width="2"/>
+  <use href="#p" class="dash" fill="none" stroke="url(#wire)" stroke-width="2"/>
+
+  <g>
+    <circle r="9" fill="url(#pulse)"><animateMotion dur="4s" repeatCount="indefinite" rotate="auto"><mpath href="#p"/></animateMotion></circle>
+    <circle r="6" fill="url(#pulse)"><animateMotion dur="4s" begin="1.3s" repeatCount="indefinite"><mpath href="#p"/></animateMotion></circle>
+    <circle r="7" fill="url(#pulse)"><animateMotion dur="4s" begin="2.6s" repeatCount="indefinite"><mpath href="#p"/></animateMotion></circle>
+  </g>
+
+  <!-- nodos -->
+  <g transform="translate(180 120)">
+    <circle r="46" fill="#0d1224" stroke="#7aa2f7" stroke-width="2" class="node"/>
+    <circle r="56" fill="none" stroke="#7aa2f7" stroke-opacity=".35" stroke-dasharray="4 10" class="ring"/>
+    <text class="mono" y="7" text-anchor="middle" font-size="22" fill="#7aa2f7">01</text>
+    <text class="sans" y="92" text-anchor="middle" font-size="16" font-weight="700" fill="#e0def4">THINK</text>
+    <text class="mono" y="114" text-anchor="middle" font-size="12" fill="#787c99">arquitectura · producto</text>
+  </g>
+  <g transform="translate(460 120)">
+    <circle r="46" fill="#0d1224" stroke="#9d8cf7" stroke-width="2" class="node n2"/>
+    <circle r="56" fill="none" stroke="#9d8cf7" stroke-opacity=".35" stroke-dasharray="4 10" class="ring"/>
+    <text class="mono" y="7" text-anchor="middle" font-size="22" fill="#9d8cf7">02</text>
+    <text class="sans" y="92" text-anchor="middle" font-size="16" font-weight="700" fill="#e0def4">ORCHESTRATE</text>
+    <text class="mono" y="114" text-anchor="middle" font-size="12" fill="#787c99">agentes · MCP · LLMs</text>
+  </g>
+  <g transform="translate(740 120)">
+    <circle r="46" fill="#0d1224" stroke="#bb9af7" stroke-width="2" class="node n3"/>
+    <circle r="56" fill="none" stroke="#bb9af7" stroke-opacity=".35" stroke-dasharray="4 10" class="ring"/>
+    <text class="mono" y="7" text-anchor="middle" font-size="22" fill="#bb9af7">03</text>
+    <text class="sans" y="92" text-anchor="middle" font-size="16" font-weight="700" fill="#e0def4">INTEGRATE</text>
+    <text class="mono" y="114" text-anchor="middle" font-size="12" fill="#787c99">APIs · datos · automatización</text>
+  </g>
+  <g transform="translate(1020 120)">
+    <circle r="46" fill="#0d1224" stroke="#D97757" stroke-width="2" class="node n4"/>
+    <circle r="56" fill="none" stroke="#D97757" stroke-opacity=".35" stroke-dasharray="4 10" class="ring"/>
+    <text class="mono" y="7" text-anchor="middle" font-size="22" fill="#D97757">04</text>
+    <text class="sans" y="92" text-anchor="middle" font-size="16" font-weight="700" fill="#e0def4">SHIP</text>
+    <text class="mono" y="114" text-anchor="middle" font-size="12" fill="#787c99">web · mobile · cloud</text>
+  </g>
+
+  <rect width="1199" height="259" x=".5" y=".5" rx="18" fill="none" stroke="#bb9af7" stroke-opacity=".18"/>
+</svg>
