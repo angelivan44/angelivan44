@@ -16,6 +16,7 @@
 <a href="https://www.linkedin.com/in/%C3%A1ngel-ivan-huayas-izquierdo/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 <a href="mailto:angelhuayas@gmail.com"><img src="https://img.shields.io/badge/Let's_talk-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 <a href="https://github.com/angelivan44?tab=repositories"><img src="https://img.shields.io/badge/Explore_my_work-111629?style=for-the-badge&logo=github&logoColor=white" alt="Repositorios" /></a>
+<a href="https://angelivan44.github.io/angelivan44/"><img src="https://img.shields.io/badge/Web_crawler_%2F[•]\-bb9af7?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Ver mi web interactiva" /></a>
 <img src="https://komarev.com/ghpvc/?username=angelivan44&style=for-the-badge&color=7a5af8&label=PROFILE+VIEWS" alt="Profile views" />
 
 </div>
