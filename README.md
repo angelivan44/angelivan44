@@ -46,6 +46,12 @@
 
 ## 🧬 TECH DNA <sub><sup>/ stack</sup></sub>
 
+<div align="center">
+  <img src="./assets/crawler.svg" alt="Web crawler: una araña de líneas recorre el stack y resalta cada tecnología que toca" width="100%" />
+</div>
+
+<br/>
+
 <table>
   <tr>
     <td width="26%"><b>01 · Lenguajes</b></td>
